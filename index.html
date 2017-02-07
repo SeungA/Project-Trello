@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Trello</title>
+</head>
+<body>
+  <!-- .wrap>(.header+.content+.window) -->
+  <div class="wrap">
+    <header>
+      <h1 class="logo"><a href=""><img src="images/logo.png" alt=""></a></h1>
+      <div class="search"></div>
+    </header>
+      <div class="board">
+        <div class="header">
+          <a href="" class="name">Welcome Board</a>
+        </div>
+        <section class="content">
+          <!-- <article class="list">
+            <div class="header"></div>
+            <section class="content">
+              <article class="card">
+                <div class="header"></div>
+                <div class="content"></div>
+              </article>
+            </section>
+          </article> -->
+          <article class="list-add">
+            <span class="placeholder">Add a list</span>
+            <form>
+              <input class="list-name" type="text" name="name" placeholder="Add a list" autocomplete="off" dir="auto" maxlength="512">
+              <div class="list-add-controls">
+                <input class="primary mod-list-add-button js-save-edit" type="submit" value="Save">
+                <a class="icon-lg icon-close dark-hover js-cancel-edit" href="#"></a>
+              </div>
+            </form>
+          </article>
+        </section>
+        <div class="menu"></div>
+      </div>
+    <div class="window"></div>
+  </div>
+</body>
+</html>

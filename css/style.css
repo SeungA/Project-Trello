@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 14px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  background-color: rgb(0, 121, 191);
+}
+
+img{
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+input{
+  border: 1px solid #CDD2D4;
+  padding: 7px;
+  font-size: 14px;
+}
+
+
+/*----- class-list -----*/
+
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+
+/*----- header -----*/
+
+
+header{
+  padding: 5px;
+  background: rgba(0,0,0,.15);
+  z-index: 10;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+.logo{
+  width: 80px;
+  height: 30px;
+  margin: 0 auto;
+  opacity: 0.5;
+  transition: opacity ease-in 85ms;
+}
+
+.logo:hover{
+  opacity: 1;
+}
+
+
+/*----- board -----*/
+
+
+.board .header{
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.board .name{
+  padding: 3px 8px;
+}
+
+.board .name:hover{
+  background: #026AA7;
+}
+
+.board .content{
+  padding: 0 10px;
+}
+
+
+/*----- list -----*/
+
+
+.list-add{
+  width: 270px;
+}
+
+.list-add span{
+  display: block;
+  padding: 8px;
+  color: rgba(255,255,255,.7);
+  background: rgba(0,0,0,.12);
+}
+
+.list-add span:hover{
+  background: rgba(0,0,0,.2);
+}
+
+.list-add form{
+  padding: 4px;
+  background-color: #E2E4E6;
+}
+
+.list-add form > input{
+  width: 100%;
+  margin-bottom: 4px;
+  border-color: rgba(0,0,0,.1);
+  background: rgba(0,0,0,.05);
+}
+
+.list-add-controls input{
+  background-color: #61BD4F;
+  color: #fff;
+}
+
+.list-add-controls input:hover{
+  background-color: #5AAC44;
+}
+
+.list-add-controls a{
+  font-size: 18px;
+  color: rgba(0,0,0,.3);
+}
+
+.list-add-controls a:before{
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+.list-add-controls a:hover{
+  color: rgba(0,0,0,.4);
+}
+
+
+/*----- card -----*/
