@@ -4,11 +4,12 @@
   border-radius: 3px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  vertical-align: top;
 }
 
 body{
-  font-size: 14px;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font: 14px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: #4d4d4d;
   background-color: rgb(0, 121, 191);
 }
 
@@ -21,22 +22,48 @@ a{
   color: #fff;
 }
 
-input{
-  border: 1px solid #CDD2D4;
-  padding: 7px;
+
+/*----- controls -----*/
+
+
+.controls{
+  height: 100%;
+  margin-top: 4px;
+  overflow: hidden;
+  transition: all 85ms ease-in;
+}
+
+.controls .btn-save{
+  padding: 0 7px;
+  height: 2rem;
   font-size: 14px;
+  color: #fff;
+  line-height: 2rem;
+  border: 1px solid rgba(0,0,0,.1);
+  background-color: #61BD4F;
 }
 
-
-/*----- class-list -----*/
-
-
-.hide{
-  display: none;
+.controls .btn-save:hover{
+  background-color: #5AAC44;
 }
 
-.show{
-  display: block;
+.controls .icon-close{
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: rgba(0,0,0,.3);
+}
+
+.controls .icon-close:before{
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+.controls .icon-close:hover{
+  color: rgba(0,0,0,.4);
 }
 
 
@@ -66,21 +93,21 @@ header{
 /*----- board -----*/
 
 
-.board .header{
+.board > .header{
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
 }
 
-.board .name{
+.board > .header .name{
   padding: 3px 8px;
 }
 
-.board .name:hover{
+.board > .header .name:hover{
   background: #026AA7;
 }
 
-.board .content{
+.board > .content{
   padding: 0 10px;
 }
 
@@ -88,54 +115,72 @@ header{
 /*----- list -----*/
 
 
-.list-add{
+.list{
+  display: inline-block;
   width: 270px;
+  height: 100%;
+  margin: 0 5px;
+  background: #E2E4E6;
 }
 
-.list-add span{
-  display: block;
+.list > .header{
+  padding: 8px 10px;
+}
+.list > .header h2{
+  font-size: 18px;
+}
+
+.list > .content{
   padding: 8px;
+}
+
+.list-add.non-click{
   color: rgba(255,255,255,.7);
   background: rgba(0,0,0,.12);
 }
 
-.list-add span:hover{
+.list-add.non-click:hover{
   background: rgba(0,0,0,.2);
 }
 
-.list-add form{
+.list-add{
+  display: inline-block;
+  width: 270px;
+  height: auto;
+  min-height: 32px;
   padding: 4px;
   background-color: #E2E4E6;
+  transition: background 85ms ease-in;
 }
 
-.list-add form > input{
+.list-add form{
+  display: block;
+}
+
+.list-add.non-click .placeholder{
+  display: block;
+}
+
+.list-add .placeholder{
+  display: none;
+  padding: 8px;
+}
+
+.list-add.non-click .name{
+  display: none;
+}
+
+.list-add .name{
   width: 100%;
-  margin-bottom: 4px;
-  border-color: rgba(0,0,0,.1);
+  padding: 7px;
+  font-size: 14px;
+  border: 1px solid rgba(0,0,0,.1);
   background: rgba(0,0,0,.05);
 }
 
-.list-add-controls input{
-  background-color: #61BD4F;
-  color: #fff;
-}
-
-.list-add-controls input:hover{
-  background-color: #5AAC44;
-}
-
-.list-add-controls a{
-  font-size: 18px;
-  color: rgba(0,0,0,.3);
-}
-
-.list-add-controls a:before{
-  font-family: FontAwesome;
-  content: "\f00d";
-}
-
-.list-add-controls a:hover{
-  color: rgba(0,0,0,.4);
+.list-add.non-click .controls{
+  height: 0;
+  margin: 0;
 }
 
 
